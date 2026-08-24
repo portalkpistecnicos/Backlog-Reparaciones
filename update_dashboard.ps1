@@ -63,7 +63,6 @@ $prettyMap = @{
     'PLATAFORMA N2 IPTV'                  = 'Plataforma N2 IPTV'
     'PLATAFORMA CASA CERRADA'             = 'Plataforma Casa Cerrada'
     'GESTION APP STREAMING'               = 'Gesti&oacute;n App Streaming'
-    'FALLA MASIVA PLANTA INTERNA'         = 'Falla Masiva Planta Interna'
     'PLATAFORMA REPARADO CASA CERRADA'    = 'Plataforma Reparado Casa Cerrada'
     'FALLA MASIVA MIGRACION'              = 'Falla Masiva Migraci&oacute;n'
     'PLATAFORMA FALLA MASIVA BANDA ANCHA' = 'Plataforma Falla Masiva Banda Ancha'
@@ -235,19 +234,24 @@ $html = [regex]::Replace($html, $pattern, { param($m) $newBlock }, 1)
 Write-Log "index.html actualizado ($($rows.Count) dias, corte $lastDate, $totalPend pendientes)"
 
 # ---------------------------------------------------------------------------
-# 7. Commit + push
+# 7. Commit + push (EAP en Continue: git escribe avisos normales a stderr,
+#    que PowerShell 5.1 convierte en error terminante si se captura con 2>&1
+#    bajo Stop)
 # ---------------------------------------------------------------------------
+$ErrorActionPreference = 'Continue'
 Set-Location $RepoDir
-git add index.html update.log 2>&1 | ForEach-Object { Write-Log $_ }
 
+git add index.html update.log 2>$null 1>$null
 $statusPorcelain = git status --porcelain -- index.html
 if ([string]::IsNullOrWhiteSpace($statusPorcelain)) {
     Write-Log "Sin cambios en index.html, no se genera commit."
 } else {
     $commitMsg = "Actualizacion diaria backlog - $lastDate ($totalPend pendientes)"
-    git commit -m $commitMsg 2>&1 | ForEach-Object { Write-Log $_ }
-    git push origin HEAD 2>&1 | ForEach-Object { Write-Log $_ }
-    Write-Log "Push completado."
+    git commit -m $commitMsg 2>$null 1>$null
+    git push origin HEAD 2>$null 1>$null
+    if ($LASTEXITCODE -eq 0) { Write-Log "Push completado." }
+    else { Write-Log "ERROR: git push devolvio codigo $LASTEXITCODE" }
 }
+$ErrorActionPreference = 'Stop'
 
 Write-Log "== Fin =="
