@@ -23,3 +23,9 @@ En C:\Users\xarancibia\Backlog-Reparaciones\update_dashboard.ps1: 252 Carácter:
    69785bf..0436ebd  HEAD -> master
 [2026-08-23 21:33:43] Push completado.
 [2026-08-23 21:33:43] == Fin ==
+[2026-08-26 13:31:33] == Iniciando actualizacion ==
+[2026-08-26 13:31:33] CSV fuente: G:\Mi unidad\Respaldo\Documents\KPI's\Backlog Repara\p67_base_backlog_reparaciones_mod-detalle_2026-08.csv
+[2026-08-26 13:31:36] Filas leidas: 32070
+[2026-08-26 13:32:19] Dias procesados: 22
+[2026-08-26 13:32:19] Ultima fecha: 22-08-2026  -  pendientes: 338
+[2026-08-26 13:32:19] index.html actualizado (22 dias, corte 22-08-2026, 338 pendientes)
