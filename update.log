@@ -37,3 +37,15 @@ En C:\Users\xarancibia\Backlog-Reparaciones\update_dashboard.ps1: 252 Carácter:
 [2026-08-26 13:36:45] Dias procesados: 26
 [2026-08-26 13:36:45] Ultima fecha: 26-08-2026  -  pendientes: 316
 [2026-08-26 13:36:45] index.html actualizado (26 dias, corte 26-08-2026, 316 pendientes)
+[2026-08-26 14:19:44] == Iniciando actualizacion ==
+[2026-08-26 14:19:44] CSV fuente: G:\Mi unidad\Respaldo\Documents\KPI's\Backlog Repara\p67_base_backlog_reparaciones_mod-detalle_2026-08.csv
+[2026-08-26 14:19:48] Filas leidas: 37523
+[2026-08-26 14:21:07] Ultima fecha: 26-08-2026
+[2026-08-26 14:21:20] == Iniciando actualizacion ==
+[2026-08-26 14:21:20] CSV fuente: G:\Mi unidad\Respaldo\Documents\KPI's\Backlog Repara\p67_base_backlog_reparaciones_mod-detalle_2026-08.csv
+[2026-08-26 14:21:24] Filas leidas: 37523
+[2026-08-26 14:22:37] Ultima fecha: 26-08-2026
+[2026-08-26 14:22:37] Zona: en_proceso=316 backlog=2.265 fbr=0.93
+[2026-08-26 14:22:38] Agencias: 3
+[2026-08-26 14:22:41] Buckets: 12
+[2026-08-26 14:22:41] index.html actualizado (corte 26-08-2026, zona en_proceso=316, backlog=2.265)
