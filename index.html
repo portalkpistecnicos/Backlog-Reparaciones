@@ -387,45 +387,46 @@
 (function(){
 
   // ===AUTO-DATA-START=== (generado por update_dashboard.ps1 - no editar a mano)
-  var GENERATED_AT = "2026-09-10T23:28:58";
+  var GENERATED_AT = "2026-09-11T13:23:41";
   var daily = [
-    {d:"2026-01-09", dow:"Vie", ep:292, cd:154, c6:154, denom:25.67, br:11.377, fbr:0.93, sun:false},
-    {d:"2026-02-09", dow:"Lun", ep:300, cd:182, c6:182, denom:30.33, br:9.89, fbr:0.93, sun:false},
-    {d:"2026-03-09", dow:"Lun", ep:275, cd:154, c6:154, denom:25.67, br:10.714, fbr:0.93, sun:false},
-    {d:"2026-04-09", dow:"Jue", ep:263, cd:169, c6:169, denom:28.17, br:9.337, fbr:0.93, sun:false},
-    {d:"2026-05-09", dow:"S&aacute;b", ep:241, cd:110, c6:110, denom:18.33, br:13.145, fbr:0.93, sun:false},
-    {d:"2026-06-09", dow:"Mar", ep:0, cd:35, c6:35, denom:5.83, br:0, fbr:1.08, sun:false},
-    {d:"2026-07-09", dow:"Jue", ep:297, cd:231, c6:231, denom:38.5, br:7.714, fbr:0.93, sun:false},
-    {d:"2026-08-09", dow:"Dom", ep:269, cd:198, c6:0, denom:0, br:null, fbr:null, sun:true},
-    {d:"2026-09-09", dow:"Mi&eacute;", ep:237, cd:166, c6:166, denom:27.67, br:8.566, fbr:0.93, sun:false},
-    {d:"2026-10-09", dow:"Vie", ep:235, cd:0, c6:0, denom:0, br:null, fbr:null, sun:false},
+    {d:"2026-09-01", dow:"Mar", ep:292, cd:154, c6:965, denom:160.83, br:1.816, fbr:0.93, sun:false},
+    {d:"2026-09-02", dow:"Mi&eacute;", ep:300, cd:182, c6:977, denom:162.83, br:1.842, fbr:0.93, sun:false},
+    {d:"2026-09-03", dow:"Jue", ep:275, cd:154, c6:968, denom:161.33, br:1.705, fbr:0.93, sun:false},
+    {d:"2026-09-04", dow:"Vie", ep:263, cd:169, c6:976, denom:162.67, br:1.617, fbr:0.9383, sun:false},
+    {d:"2026-09-05", dow:"S&aacute;b", ep:241, cd:110, c6:976, denom:162.67, br:1.482, fbr:0.9518, sun:false},
+    {d:"2026-09-06", dow:"Dom", ep:0, cd:35, c6:976, denom:162.67, br:null, fbr:null, sun:true},
+    {d:"2026-09-07", dow:"Lun", ep:297, cd:231, c6:1000, denom:166.67, br:1.782, fbr:0.93, sun:false},
+    {d:"2026-09-08", dow:"Mar", ep:269, cd:198, c6:1044, denom:174, br:1.546, fbr:0.9454, sun:false},
+    {d:"2026-09-09", dow:"Mi&eacute;", ep:237, cd:166, c6:1028, denom:171.33, br:1.383, fbr:0.9617, sun:false},
+    {d:"2026-09-10", dow:"Jue", ep:235, cd:170, c6:1044, denom:174, br:1.351, fbr:0.9649, sun:false},
+    {d:"2026-09-11", dow:"Vie", ep:247, cd:0, c6:875, denom:145.83, br:1.694, fbr:0.9306, sun:false},
   ];
 
   var breakdowns = {
-    territorio: { total: 235, items: [
-      {name:'Vi&ntilde;a del Mar', value:125},
-      {name:'Valpara&iacute;so', value:83},
-      {name:'San Antonio', value:27}
+    territorio: { total: 247, items: [
+      {name:'Vi&ntilde;a del Mar', value:128},
+      {name:'Valpara&iacute;so', value:93},
+      {name:'San Antonio', value:26}
     ]},
-    ambito: { total: 235, items: [
-      {name:'Atenci&oacute;n Clientes', value:142},
-      {name:'Sin dato', value:31},
-      {name:'Agenda y Validaci&oacute;n', value:25},
-      {name:'Log&iacute;stica', value:22},
-      {name:'Casa Cerrada', value:7},
-      {name:'Falla Masiva Pta. Externa', value:3},
-      {name:'PEXT ATC', value:2},
-      {name:'Falla Masiva Pta. Interna', value:1},
-      {name:'Otros (2 grupos)', value:2}
+    ambito: { total: 247, items: [
+      {name:'Atenci&oacute;n Clientes', value:149},
+      {name:'Sin dato', value:36},
+      {name:'Log&iacute;stica', value:23},
+      {name:'Agenda y Validaci&oacute;n', value:22},
+      {name:'Falla Masiva Pta. Interna', value:9},
+      {name:'Casa Cerrada', value:4},
+      {name:'Falla Masiva Pta. Externa', value:2},
+      {name:'PEXT ATC', value:1},
+      {name:'Otros (1 grupos)', value:1}
     ]},
-    grupo: { total: 235, items: [
-      {name:'Plataforma Terreno', value:191},
-      {name:'Plataforma N2 IPTV', value:8},
-      {name:'Plataforma Casa Cerrada', value:7},
-      {name:'Gesti&oacute;n App Streaming', value:6},
+    grupo: { total: 247, items: [
+      {name:'Plataforma Terreno', value:195},
+      {name:'Gesti&oacute;n App Streaming', value:12},
+      {name:'Plataforma N2 BA', value:10},
+      {name:'Falla Masiva Pta. Interna', value:8},
       {name:'Falla Masiva Migraci&oacute;n', value:6},
-      {name:'Plataforma N2 BA', value:6},
-      {name:'Otros (7 grupos)', value:11}
+      {name:'Plataforma Casa Cerrada', value:4},
+      {name:'Otros (8 grupos)', value:12}
     ]}
   };
   // ===AUTO-DATA-END===
