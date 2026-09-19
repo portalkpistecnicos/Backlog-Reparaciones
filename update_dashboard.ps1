@@ -179,15 +179,15 @@ foreach ($t in $territorios) {
     $termHoy = if ($closuresByDateTerritorioEstado.ContainsKey($lastDate) -and $closuresByDateTerritorioEstado[$lastDate].ContainsKey($t) -and $closuresByDateTerritorioEstado[$lastDate][$t].ContainsKey('Cerrado')) { $closuresByDateTerritorioEstado[$lastDate][$t]['Cerrado'] } else { 0 }
     $cancHoy = if ($closuresByDateTerritorioEstado.ContainsKey($lastDate) -and $closuresByDateTerritorioEstado[$lastDate].ContainsKey($t) -and $closuresByDateTerritorioEstado[$lastDate][$t].ContainsKey('Cancelado')) { $closuresByDateTerritorioEstado[$lastDate][$t]['Cancelado'] } else { 0 }
 
-    $pendTerr = $lastPendAll | Where-Object { $_.rdy_cod_territorio -eq $t }
-    $reiterCount = ($pendTerr | Where-Object { $_.rdy_es_reiterada_pro -eq '1' }).Count
+    $pendTerr = @($lastPendAll | Where-Object { $_.rdy_cod_territorio -eq $t })
+    $reiterCount = @($pendTerr | Where-Object { $_.rdy_es_reiterada_pro -eq '1' }).Count
 
     $agencies += [PSCustomObject]@{
         name = (PrettyName $t); ep = $ep; termHoy = $termHoy; cancHoy = $cancHoy
         br = $br; reiterCount = $reiterCount; reiterTotal = $ep
     }
 }
-$agencies = $agencies | Sort-Object { if ($null -eq $_.br) { [double]::MaxValue } else { $_.br } }
+$agencies = @($agencies | Sort-Object { if ($null -eq $_.br) { [double]::MaxValue } else { $_.br } })
 Write-Log "Agencias: $($agencies.Count)"
 
 # ---------------------------------------------------------------------------
@@ -196,9 +196,9 @@ Write-Log "Agencias: $($agencies.Count)"
 $bucketGroups = $data | Where-Object { $_.cod_bucket -ne '' } | Group-Object cod_bucket
 $buckets = @()
 foreach ($g in $bucketGroups) {
-    $p = ($g.Group | Where-Object { $_.rdy_estado -eq 'pendiente' }).Count
-    $t = ($g.Group | Where-Object { $_.rdy_estado -eq 'Cerrado' }).Count
-    $c = ($g.Group | Where-Object { $_.rdy_estado -eq 'Cancelado' }).Count
+    $p = @($g.Group | Where-Object { $_.rdy_estado -eq 'pendiente' }).Count
+    $t = @($g.Group | Where-Object { $_.rdy_estado -eq 'Cerrado' }).Count
+    $c = @($g.Group | Where-Object { $_.rdy_estado -eq 'Cancelado' }).Count
     $buckets += [PSCustomObject]@{ name = $g.Name; c = $c; p = $p; t = $t }
 }
 Write-Log "Buckets: $($buckets.Count)"

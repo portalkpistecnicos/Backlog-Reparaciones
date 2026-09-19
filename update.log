@@ -87,3 +87,13 @@ En C:\Users\xarancibia\Backlog-Reparaciones\update_dashboard.ps1: 252 Carácter:
 [2026-09-19 18:43:00] Agencias: 3
 [2026-09-19 18:43:01] Buckets: 12
 [2026-09-19 18:43:01] index.html actualizado (corte 19-09-2026, zona en_proceso=218, backlog=1.924)
+[2026-09-19 18:43:06] Push completado.
+[2026-09-19 18:43:06] == Fin ==
+[2026-09-19 18:47:03] == Iniciando actualizacion ==
+[2026-09-19 18:47:04] CSV fuente: G:\Mi unidad\Respaldo\Documents\KPI's\Backlog Repara\p67_base_backlog_reparaciones_mod-detalle_2026-09.csv
+[2026-09-19 18:47:06] Filas leidas: 23800
+[2026-09-19 18:47:50] Ultima fecha: 19-09-2026
+[2026-09-19 18:47:50] Zona: en_proceso=218 backlog=1.924 fbr=0.93
+[2026-09-19 18:47:51] Agencias: 3
+[2026-09-19 18:47:53] Buckets: 12
+[2026-09-19 18:47:53] index.html actualizado (corte 19-09-2026, zona en_proceso=218, backlog=1.924)
