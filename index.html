@@ -387,54 +387,27 @@
 (function(){
 
   // ===AUTO-DATA-START=== (generado por update_dashboard.ps1 - no editar a mano)
-  var GENERATED_AT = "2026-09-19T18:35:50";
-  var daily = [
-    {d:"2026-09-01", dow:"Mar", ep:292, cd:154, c6:965, denom:160.83, br:1.816, fbr:0.93, sun:false},
-    {d:"2026-09-02", dow:"Mi&eacute;", ep:300, cd:182, c6:977, denom:162.83, br:1.842, fbr:0.93, sun:false},
-    {d:"2026-09-03", dow:"Jue", ep:275, cd:154, c6:968, denom:161.33, br:1.705, fbr:0.93, sun:false},
-    {d:"2026-09-04", dow:"Vie", ep:263, cd:169, c6:976, denom:162.67, br:1.617, fbr:0.9383, sun:false},
-    {d:"2026-09-05", dow:"S&aacute;b", ep:241, cd:110, c6:976, denom:162.67, br:1.482, fbr:0.9518, sun:false},
-    {d:"2026-09-06", dow:"Dom", ep:0, cd:35, c6:976, denom:162.67, br:null, fbr:null, sun:true},
-    {d:"2026-09-07", dow:"Lun", ep:297, cd:231, c6:1000, denom:166.67, br:1.782, fbr:0.93, sun:false},
-    {d:"2026-09-08", dow:"Mar", ep:269, cd:198, c6:1044, denom:174, br:1.546, fbr:0.9454, sun:false},
-    {d:"2026-09-09", dow:"Mi&eacute;", ep:237, cd:166, c6:1028, denom:171.33, br:1.383, fbr:0.9617, sun:false},
-    {d:"2026-09-10", dow:"Jue", ep:235, cd:170, c6:1044, denom:174, br:1.351, fbr:0.9649, sun:false},
-    {d:"2026-09-11", dow:"Vie", ep:247, cd:160, c6:1035, denom:172.5, br:1.432, fbr:0.9568, sun:false},
-    {d:"2026-09-12", dow:"S&aacute;b", ep:236, cd:106, c6:1031, denom:171.83, br:1.373, fbr:0.9627, sun:false},
-    {d:"2026-09-13", dow:"Dom", ep:0, cd:37, c6:1031, denom:171.83, br:null, fbr:null, sun:true},
-    {d:"2026-09-14", dow:"Lun", ep:286, cd:191, c6:991, denom:165.17, br:1.732, fbr:0.93, sun:false},
-    {d:"2026-09-15", dow:"Mar", ep:261, cd:168, c6:961, denom:160.17, br:1.63, fbr:0.937, sun:false},
-    {d:"2026-09-16", dow:"Mi&eacute;", ep:264, cd:176, c6:971, denom:161.83, br:1.631, fbr:0.9369, sun:false},
-    {d:"2026-09-17", dow:"Jue", ep:228, cd:145, c6:946, denom:157.67, br:1.446, fbr:0.9554, sun:false},
-    {d:"2026-09-18", dow:"Vie", ep:197, cd:0, c6:786, denom:131, br:1.504, fbr:0.9496, sun:false},
-    {d:"2026-09-19", dow:"S&aacute;b", ep:218, cd:0, c6:680, denom:113.33, br:1.924, fbr:0.93, sun:false},
+  var GENERATED_AT = "2026-09-19T18:43:01";
+  var lastDate = "2026-09-19";
+  var zone = { enProceso:218, termHoy:0, cancHoy:0, br:1.924, fbr:0.93 };
+  var agencies = [
+    {name:'Vi&ntilde;a del Mar', ep:109, termHoy:0, cancHoy:0, br:1.822, reiterCount:, reiterTotal:109},
+    {name:'Valpara&iacute;so', ep:73, termHoy:0, cancHoy:0, br:1.888, reiterCount:, reiterTotal:73},
+    {name:'San Antonio', ep:36, termHoy:0, cancHoy:0, br:2.427, reiterCount:0, reiterTotal:36}
   ];
-
-  var breakdowns = {
-    territorio: { total: 218, items: [
-      {name:'Vi&ntilde;a del Mar', value:109},
-      {name:'Valpara&iacute;so', value:73},
-      {name:'San Antonio', value:36}
-    ]},
-    ambito: { total: 218, items: [
-      {name:'Atenci&oacute;n Clientes', value:150},
-      {name:'Log&iacute;stica', value:28},
-      {name:'Sin dato', value:24},
-      {name:'Agenda y Validaci&oacute;n', value:6},
-      {name:'Casa Cerrada', value:5},
-      {name:'Gestion De Incidencias', value:3},
-      {name:'Plataforma Quiebres', value:1},
-      {name:'PEXT ATC', value:1}
-    ]},
-    grupo: { total: 218, items: [
-      {name:'Plataforma Terreno', value:185},
-      {name:'Gesti&oacute;n App Streaming', value:12},
-      {name:'Falla Masiva Migraci&oacute;n', value:7},
-      {name:'Plataforma Casa Cerrada', value:5},
-      {name:'Incidencia Fase1', value:3},
-      {name:'Derivado a Onnet', value:3},
-      {name:'Otros (3 grupos)', value:3}
-    ]}
+  var bucketData = {
+    'VALPARAISO 1_MULT': { c:130, p:514, t:1959 },
+    'VALPARAISO 2_MULT': { c:132, p:193, t:893 },
+    'VINA DEL MAR 3_MULT': { c:119, p:611, t:2796 },
+    'VALPARAISO 3_MULT': { c:105, p:414, t:1723 },
+    'VINA DEL MAR 1_MULT': { c:81, p:381, t:1741 },
+    'VINA DEL MAR 4_MULT': { c:240, p:788, t:2794 },
+    'VINA DEL MAR 2_MULT': { c:126, p:498, t:2648 },
+    'VALPARAISO 4_MULT': { c:76, p:333, t:1341 },
+    'SAN ANTONIO 3_MULT': { c:94, p:176, t:610 },
+    'SAN ANTONIO 1_MULT': { c:50, p:249, t:966 },
+    'SAN ANTONIO 2_MULT': { c:3, p:27, t:146 },
+    'VINA DEL MAR 5_MULT': { c:28, p:162, t:653 }
   };
   // ===AUTO-DATA-END===
 
